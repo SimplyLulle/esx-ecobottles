@@ -12,3 +12,13 @@
 
 3) Add this in your server.cfg :
 ``start esx-ecobottles``
+
+
+[CREATURE]
+
+* qalle
+
+[EDITOR]
+
+* Samply
+
