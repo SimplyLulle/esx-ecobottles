@@ -12,7 +12,7 @@ Citizen.CreateThread(function ()
 end)
 
 local Coordinates = {
-    { x = 29.337753295898, y = -1770.3348388672, z = 29.607357025146 - 0.945 },
+    { x = 29.337753295898, y = -1770.3348388672, z = 29.607357025146 - 0.945 },    ## You can add more if you want
     { x = 388.30194091797, y = -874.88238525391, z = 29.295169830322 - 0.945 },
     { x = 26.877752304077, y = -1343.0764160156, z = 29.497024536133 - 0.945 },
 }
@@ -76,13 +76,13 @@ Citizen.CreateThread(function()
         if distance ~= -1 and distance <= 1.5 then
             if entity ~= nil then
                 local binCoords = GetEntityCoords(entity)
-                ESX.Game.Utils.DrawText3D({ x = binCoords.x, y = binCoords.y, z = binCoords.z + 1 }, '[E] Search Trashbin', 0.4)
+                ESX.Game.Utils.DrawText3D({ x = binCoords.x, y = binCoords.y, z = binCoords.z + 1 }, '[E] Sök papperskorgen', 0.4)
                 if IsControlJustReleased(0, 38) then
                     if lastBin ~= entity then
                         lastBin = entity
                         OpenTrashCan()
                     else
-                        ESX.ShowNotification('You\'ve already searched this bin!')
+                        ESX.ShowNotification('Du har redan sökt den här tunan!')
                     end
                 end
             else
